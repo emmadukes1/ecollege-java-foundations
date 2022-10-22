@@ -1,33 +1,25 @@
-//Create a Java program to model the basic workings of an ATM machine.
-//Use an if-else statement to determine if a cash withdrawal can be made.
-//Assume the amount to withdraw is 20.
-//Assume the existing balance is 180.
-//Determine if the withdrawal request can be made.
-//If the request is processed, calculate and display the new balance.
+//This is similar to the previous exercise.
+// Assume the amount to withdraw is 20.
+// Assume the existing balance is 180.
+// Determine if the withdrawal request can be made.
+// Display one of two messages.
+//▪ Insufficient funds
+//▪ Withdrawal processed
+// Use the conditional ternary operator (?:) to solve the problem.
+// The value returned by the conditional ternary operator should be stored in a variable of type String.
+// Output the value of the String to the console.
 
-public class JFT6Ex4 {
+public class JFT6Ex5 {
 
     public static void main(String[] args) {
 
         double withdrawlAmount = 20.00;
-        double existingBalance = 160.00;
+        double existingBalance = 180.00;
         boolean allowCashWithdrawl = false;
 
-        if (withdrawlAmount <= existingBalance)
-        {
-            allowCashWithdrawl = true;
-        }
-        else
-        {
-            allowCashWithdrawl = false;
-        }
+        String msg = withdrawlAmount <= existingBalance ? "Withdrawl processed" : "Insufficient funds";
 
-        if (allowCashWithdrawl == true){
-            double newBalance = existingBalance - withdrawlAmount;
-            System.out.println("New balance: euro " + newBalance);
-        }
-        else {
-            System.out.println("Insufficient funds");
-        }
+        System.out.println(msg);
+
     }
 }
